@@ -1,4 +1,4 @@
-module ziti-db-explorer
+module github.com/openziti/ziti-db-explorer
 
 go 1.18
 
