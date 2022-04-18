@@ -52,3 +52,10 @@ show          print the full value of a key
 stats-bucket  show stats for the current bucket
 stats-db      show stats for the db
 ```
+
+# Embedding
+
+This repository contains two go modules that are intended for import:
+
+- `./cmd/ziti-db-explorer/zdecli` - The `Run()` method is exposed in order to make the entire CLI embeddable in other tools
+- `./zdelib` - Provides low level access to bbolt and boltz primitives to create your own tools
