@@ -35,8 +35,8 @@ jobs:
           BUILD_DATE=$(date -u "+%F %T+00:00")
           GIT_COMMIT=$(git rev-parse --short HEAD)
           GIT_BRANCH=$(git branch --show-current)
-          REPO_PREFIX="github.com/openziti/ziti-db-explorer"
-          go build -ldflags "-X '$REPO_PREFIX/zdelib.Commit=$GIT_COMMIT' -X '$REPO_PREFIX/zdelib.Branch=$GIT_BRANCH' -X '$REPO_PREFIX/zdelib.Version=$GIT_LAST_VERSION-$GIT-COMMIT' -X '$REPO_PREFIX/zdelib.BuildDate=$BUILD_DATE'" -o "./" ./...
+          REPO_PREFIX="ziti-db-explorer"
+          go build -ldflags "-X '$REPO_PREFIX/zdelib.Commit=$GIT_COMMIT' -X '$REPO_PREFIX/zdelib.Branch=$GIT_BRANCH' -X '$REPO_PREFIX/zdelib.Version=$GIT_LAST_VERSION-$GIT_COMMIT' -X '$REPO_PREFIX/zdelib.BuildDate=$BUILD_DATE'" -o "./" ./...
           tar -cvf ziti-db-explorer.tar ./ziti-db-explorer
 
       - name: List
@@ -80,8 +80,8 @@ jobs:
           $BUILD_DATE=get-date -AsUTC -Format "yyyy-MM-dd HH:mm:ss+00:00"
           $GIT_COMMIT=git rev-parse --short HEAD
           $GIT_BRANCH=git branch --show-current
-          $REPO_PREFIX="github.com/openziti/ziti-db-explorer"
-          go build -ldflags "-X '$REPO_PREFIX/zdelib.Commit=$GIT_COMMIT' -X '$REPO_PREFIX/zdelib.Branch=$GIT_BRANCH' -X '$REPO_PREFIX/zdelib.Version=$GIT_LAST_VERSION-$GIT-COMMIT' -X '$REPO_PREFIX/zdelib.BuildDate=$BUILD_DATE'" -o "./" ./...
+          $REPO_PREFIX="ziti-db-explorer"
+          go build -ldflags "-X '$REPO_PREFIX/zdelib.Commit=$GIT_COMMIT' -X '$REPO_PREFIX/zdelib.Branch=$GIT_BRANCH' -X '$REPO_PREFIX/zdelib.Version=$GIT_LAST_VERSION-$GIT_COMMIT' -X '$REPO_PREFIX/zdelib.BuildDate=$BUILD_DATE'" -o "./" ./...
       - name: List
         run: |
           ls
@@ -120,8 +120,8 @@ jobs:
           BUILD_DATE=$(date -u "+%F %T+00:00")
           GIT_COMMIT=$(git rev-parse --short HEAD)
           GIT_BRANCH=$(git branch --show-current)
-          REPO_PREFIX="github.com/openziti/ziti-db-explorer"
-          go build -ldflags "-X '$REPO_PREFIX/zdelib.Commit=$GIT_COMMIT' -X '$REPO_PREFIX/zdelib.Branch=$GIT_BRANCH' -X '$REPO_PREFIX/zdelib.Version=$GIT_LAST_VERSION-$GIT-COMMIT' -X '$REPO_PREFIX/zdelib.BuildDate=$BUILD_DATE'" -o "./" ./...
+          REPO_PREFIX="ziti-db-explorer"
+          go build -ldflags "-X '$REPO_PREFIX/zdelib.Commit=$GIT_COMMIT' -X '$REPO_PREFIX/zdelib.Branch=$GIT_BRANCH' -X '$REPO_PREFIX/zdelib.Version=$GIT_LAST_VERSION-$GIT_COMMIT' -X '$REPO_PREFIX/zdelib.BuildDate=$BUILD_DATE'" -o "./" ./...
           tar -cvf ziti-db-explorer.tar ./ziti-db-explorer
       - name: List
         run: |

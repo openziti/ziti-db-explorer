@@ -4,6 +4,8 @@ database is a key value store where both keys and values are treated as opaque b
 [storage.boltz](https://github.com/openziti/storage) library adds types to the base bbolt implementation. While other
 tools exist to explore raw bbolt database files, they do not know of OpenZiti's type system.
 
+![example usage](example.png "Example")
+
 [//]: # (This tool is also included in the `ziti` CLI under `ziti db explore` in version 0.25.5 and later)
 
 # Installation
@@ -31,11 +33,22 @@ Usage:
 
 # Commands
 
-All commands support tab completion.
+All commands support tab completion. 
 
-- `list [--skip x, --limit -y]` - list keys by skipping x and limiting to y
-- `show <key>` - show the entire value of a key (long values are truncated)
-- `back` - alternative to `cd ..`
-- `cd <bucket>` - enter bucket
-- `root` - return to the root bucket
-- `clear` - clear the console
+```
+root> help
+command       description
+back          go back one bucket level (alias b)
+cd            enter a bucket
+clear         clear the console
+count         number of keys in bucket
+help          prints help
+list          list keys, supports --skip <x> --limit <y>
+list-all      list all keys
+pwd           print the full path
+quit          leave this horrible place
+root          return to the root node (alias r)
+show          print the full value of a key
+stats-bucket  show stats for the current bucket
+stats-db      show stats for the db
+```
