@@ -16,7 +16,7 @@ jobs:
     runs-on: macos-latest
     steps:
       - name: Git Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
@@ -26,9 +26,9 @@ jobs:
           echo "Last git tag: $GIT_LAST_VERSION"
 
       - name: Install Go
-        uses: actions/setup-go@v2
+        uses: actions/setup-go@v3
         with:
-          go-version: '~1.18.1'
+          go-version: '1.19.x'
 
       - name: Build
         run: |
@@ -61,7 +61,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Git Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
@@ -71,9 +71,9 @@ jobs:
           echo "Last git tag: $GIT_LAST_VERSION"
 
       - name: Install Go
-        uses: actions/setup-go@v2
+        uses: actions/setup-go@v3
         with:
-          go-version: '~1.18.1'
+          go-version: '1.19.x'
 
       - name: Build
         run: |
@@ -101,7 +101,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Git Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
@@ -111,9 +111,9 @@ jobs:
           echo "Last git tag: $GIT_LAST_VERSION"
 
       - name: Install Go
-        uses: actions/setup-go@v2
+        uses: actions/setup-go@v3
         with:
-          go-version: '~1.18.1'
+          go-version: '1.19.x'
 
       - name: Build
         run: |
