@@ -1,3 +1,7 @@
+# PROJECT IS ARCHIVED
+
+Code for this project has moved into the openziti/ziti project
+
 # ziti-db-explorer
 OpenZiti controllers rely upon [bbolt](https://github.com/etcd-io/bbolt) for lightweight embedded data storage. A bbolt
 database is a key value store where both keys and values are treated as opaque byte arrays. OpenZiti's 
